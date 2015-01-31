@@ -1,4 +1,4 @@
-Dockerized Shairport-sync for Raspberry Pi
+Dockerized shairport-sync for RaspberryPi
 ==========================================
 
 Build an image for running Shairport-sync on a RaspberryPi. It uses the Raspbian base image by resin.
