@@ -39,3 +39,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start /start
 RUN chmod +x start
 CMD ["/start"]
+

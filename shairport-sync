@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+eval "shairport-sync $ARGS"
+
