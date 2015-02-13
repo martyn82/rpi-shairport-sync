@@ -36,7 +36,11 @@ RUN mkdir -p \
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Entrypoint
+COPY shairport-sync /shairport-sync
+RUN chmod +x /shairport-sync
+
 COPY start /start
 RUN chmod +x start
+
 CMD ["/start"]
 
