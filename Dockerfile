@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     avahi-daemon \
     build-essential \
     dbus \
+    expect \
     libasound2-dev \
     libavahi-client-dev \
     libdaemon-dev \
@@ -18,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libtool \
     supervisor \
+    telnet \
     unzip \
     wget
 
@@ -34,6 +36,7 @@ RUN mkdir -p \
 
 # Configuration
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN echo "10.0.0.46    denon" >> /etc/hosts
 
 # Entrypoint
 COPY shairport-sync /shairport-sync
