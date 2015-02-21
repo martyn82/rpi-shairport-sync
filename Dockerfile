@@ -34,9 +34,13 @@ RUN mkdir -p \
     && cd shairport-sync-2.2 \
     && autoreconf -i -f && ./configure --with-alsa --with-avahi --with-ssl=openssl && make && make install
 
+# Copy binaries
+COPY controller /controller
+COPY conf.json /etc/rpi-controller/conf.json
+RUN chmod +x /controller
+
 # Configuration
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-RUN echo "10.0.0.46    denon" >> /etc/hosts
 
 # Entrypoint
 COPY shairport-sync /shairport-sync
@@ -46,4 +50,3 @@ COPY start /start
 RUN chmod +x start
 
 CMD ["/start"]
-
