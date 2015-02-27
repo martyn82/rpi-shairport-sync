@@ -36,7 +36,7 @@ RUN mkdir -p \
 
 # Copy binaries
 COPY controller /controller
-COPY conf.json /etc/rpi-controller/conf.json
+COPY conf.json /conf.json
 RUN chmod +x /controller
 
 # Configuration
