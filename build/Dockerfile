@@ -26,14 +26,14 @@ RUN apt-get install -y \
 # Build and install Go
 RUN mkdir ~/go \
     && cd ~/go \
-    && wget https://go.googlesource.com/go/+archive/go1.4.2.tar.gz \
+    && wget --no-check-certificate https://go.googlesource.com/go/+archive/go1.4.2.tar.gz \
     && tar -xvf go1.4.2.tar.gz \
     && cd src/ \
     && ./make.bash
 
 # Build controller client
 RUN mkdir ~/rpi-controller \
-    && wget -O ~/rpi-controller/rpi-controller.zip \
+    && wget --no-check-certificate -O ~/rpi-controller/rpi-controller.zip \
         https://github.com/martyn82/rpi-controller/archive/master.zip \
     && cd ~/rpi-controller \
     && unzip rpi-controller.zip \
