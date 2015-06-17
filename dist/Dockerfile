@@ -9,6 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     avahi-daemon \
+    dbus \
     gcc \
     libavahi-client-dev \
     libasound2-dev \
@@ -31,4 +32,4 @@ RUN tar -zxvf shairport-sync.tar.gz \
     && cd shairport-sync \
     && make install
 
-CMD /runner
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
