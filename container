@@ -20,7 +20,7 @@ CMD_STOP="docker stop $(docker ps -aq --filter=[name=$CNT])"
 CMD_STATUS="docker ps"
 
 CMD_BUILD="docker build -t $CNT-build ./build"
-CMD_BUILD_RUN="docker run --rm=true -v $(pwd)/dist:/build $CNT-build"
+CMD_BUILD_RUN="docker run --rm=true -v $(pwd)/dist/bin:/build $CNT-build"
 CMD_BUILD_DIST="docker build -t $CNT ./dist"
 CMD_CLEAN="docker rm -f $CNT-build"
 CMD_CLEAN_IMG="docker rmi $CNT-build"
