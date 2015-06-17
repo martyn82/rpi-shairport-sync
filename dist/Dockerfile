@@ -1,8 +1,7 @@
 # This Dockerfile creates a containerized rpi-shairport-sync production instance.
 # It will install and run a rpi-shairport-sync application.
 
-#FROM resin/rpi-raspbian:wheezy
-FROM library/ubuntu:14.04
+FROM resin/rpi-raspbian:wheezy
 MAINTAINER Martijn Endenburg <martijn.endenburg@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
