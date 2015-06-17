@@ -1,13 +1,3 @@
-# Vim
-*.swp
-
-# Logs
-*.log
-
-# Folders
-node_modules
-
-*.sublime-project
-*.sublime-workspace
-
 .project
+.settings/
+dist/bin

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Put mixer in HDMI mode
-amixer -c 0 cset numid=3 2
-
-# Run services
-/usr/bin/supervisord
-
